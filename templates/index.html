@@ -8,7 +8,7 @@
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
-        <title>Kemangi vs Lidah Buaya</title>
+        <title>Prediksi Daun Kemangi / Lidah Buaya</title>
     </head>
     <body >
         <section
@@ -30,19 +30,20 @@
                     bg-white
                     bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200
                     rounded-lg
-                    
+                   
                 "
             >
-                <h1 class="text-3xl text-bold">Daun Kemangi VS Lidah Buaya</h1>
+                <h1 class="text-3xl text-bold">Prediksi Daun Kemangi / Lidah Buaya</h1>
                 <div class="grid grid-cols-3 gap-4">
-                    <div class="...">
+                   
                         {% if uploaded_image %}
+                        <div class="...">
                         <img
                             src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}"
                             class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md"
                         />
                         {% else %}
-                        <div
+                        <!-- <div
                             class="
                                 flex
                                 justify-center
@@ -57,7 +58,7 @@
                             <p class="text-center">
                                 Masukkan gambar Kemangi atau Lidah Buaya
                             </p>
-                        </div>
+                        </div> -->
                         {% endif %} {% if prediction %}
                         <p class="mb-8">Hasil Prediksi: {{prediction}}</p>
                         {% endif %}
@@ -81,17 +82,17 @@
                         />
                         <button
                             type="submit"
-                            class="p-4 bg-indigo-500 text-white rounded-md"
+                            class="p-4 bg-green-300 text-black text-bold rounded-md hover:bg-green-400"
                         >
                             Prediksi Gambar
                         </button>
                     </form>
-
+ 
                     </div>
                   </div>
-                
-
-                
+               
+ 
+               
             </main>
         </section>
         <!-- <footer class="flex gap-x-8 justify-center items-center h-32 bg-white">
