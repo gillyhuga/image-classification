@@ -10,7 +10,7 @@
         />
         <title>Kemangi vs Lidah Buaya</title>
     </head>
-    <body>
+    <body >
         <section
             class="
                 flex
@@ -18,7 +18,7 @@
                 items-center
                 w-screen
                 h-screen
-                bg-indigo-500
+                bg-gradient-to-r from-green-400 to-blue-500
             "
         >
             <main
@@ -28,63 +28,73 @@
                     items-center
                     p-16
                     bg-white
+                    bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border border-gray-200
                     rounded-lg
+                    
                 "
             >
                 <h1 class="text-3xl text-bold">Daun Kemangi VS Lidah Buaya</h1>
-
-                {% if uploaded_image %}
-                <img
-                    src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}"
-                    class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md"
-                />
-                {% else %}
-                <div
-                    class="
-                        flex
-                        justify-center
-                        items-center
-                        my-8
-                        w-48
-                        h-48
-                        border-8 border-gray-200
-                        rounded-md
-                    "
-                >
-                    <p class="text-center">
-                        Masukkan gambar Kemangi atau Lidah Buaya
-                    </p>
-                </div>
-                {% endif %} {% if prediction %}
-                <p class="mb-8">Hasil Prediksi: {{prediction}}</p>
-                {% endif %}
-
-                <form
-                    method="post"
-                    enctype="multipart/form-data"
-                    class="flex flex-col"
-                >
-                    <input
-                        type="file"
-                        name="image"
-                        class="
-                            mb-4
-                            p-4
-                            border-8 border-gray-200
-                            rounded-md
-                            bg-gray-100
-                        "
-                    />
-                    <button
-                        type="submit"
-                        class="p-4 bg-indigo-500 text-white rounded-md"
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="...">
+                        {% if uploaded_image %}
+                        <img
+                            src="{{ url_for('send_uploaded_image', filename=uploaded_image) }}"
+                            class="mt-8 mb-4 h-48 border-8 border-gray-200 rounded-md"
+                        />
+                        {% else %}
+                        <div
+                            class="
+                                flex
+                                justify-center
+                                items-center
+                                my-8
+                                w-48
+                                h-48
+                                border-8 border-gray-200
+                                rounded-md
+                            "
+                        >
+                            <p class="text-center">
+                                Masukkan gambar Kemangi atau Lidah Buaya
+                            </p>
+                        </div>
+                        {% endif %} {% if prediction %}
+                        <p class="mb-8">Hasil Prediksi: {{prediction}}</p>
+                        {% endif %}
+                    </div>
+                    <div class="col-span-2 py-8">
+                        <form
+                        method="post"
+                        enctype="multipart/form-data"
+                        class="flex flex-col"
                     >
-                        Prediksi Gambar
-                    </button>
-                </form>
+                        <input
+                            type="file"
+                            name="image"
+                            class="
+                                mb-4
+                                p-4
+                                border-8 border-gray-200
+                                rounded-md
+                                bg-gray-100
+                            "
+                        />
+                        <button
+                            type="submit"
+                            class="p-4 bg-indigo-500 text-white rounded-md"
+                        >
+                            Prediksi Gambar
+                        </button>
+                    </form>
+
+                    </div>
+                  </div>
+                
+
+                
             </main>
         </section>
-        <footer class="flex gap-x-8 justify-center items-center h-32 bg-white">
+        <!-- <footer class="flex gap-x-8 justify-center items-center h-32 bg-white">
             <img
                 class="h-16"
                 src="https://digitalent.kominfo.go.id/assets/@images/logo.png"
@@ -95,6 +105,6 @@
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg/1200px-Logo_of_Ministry_of_Communication_and_Information_Technology_of_the_Republic_of_Indonesia.svg.png"
                 alt=""
             />
-        </footer>
+        </footer> -->
     </body>
 </html>
