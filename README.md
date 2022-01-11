@@ -1,8 +1,16 @@
-# Deployment Model CNN (Kemangi VS Lidah Buaya)
+# Deployment Model ANN (Kemangi VS Lidah Buaya)
+
+
+## Deployment status
+
+[![Heroku CI Status](https://heroku-badge.herokuapp.com/?app=image-prediction-ai)](https://image-prediction-ai.herokuapp.com/)
+
+#
+
 
 ## Deskripsi singkat
 
-Repository ini berisi semua file yang dibutuhkan untuk melakukan deployment model Machine Learning Image Classification menggunakan CNN (Convolutional Neural Network). Adapun model yang digunakan merupakan model untuk memprediksi gambar daun kemangi atau lidah buaya.
+Repository merupakan deployment model Machine Learning Image Classification menggunakan CNN (Artificial Neural Network). Adapun model yang digunakan merupakan model untuk memprediksi gambar daun kemangi atau lidah buaya.
 
 #
 
@@ -33,16 +41,31 @@ Agar dapat memprediksi daun kemangi atau lidah buaya, data input model harus men
 1. Pastikan Anda sudah menginstall Anaconda.
 1. Buka terminal/command prompt/power shell.
 1. Buat virtual environment dengan\
-   `conda create -n <nama-environment> python=3.9`
+   ```console
+   conda create -n <nama-environment> python=3.9`
+   ``` 
 1. Aktifkan virtual environment dengan\
-   `conda activate <nama-environment>`
+    ```console
+   conda activate <nama-environment>
+   ``` 
 1. Install semua dependency/package Python dengan\
-   `pip install -r requirements.txt`
+   ```console
+   pip install -r requirements.txt
+   ``` 
 1. Jalankan API menggunakan perintah\
-   `python app.py`
+   ```console
+   python app.py
+   ``` 
 
 ## Akses melalui Website
 
-1. Anda akan diberikan URL untuk membuka website berupa `localhost:5000/` atau `127.0.0.1:5000/`.
-1. Buka URL dengan browser, coba masukkan gambar gajah atau singa yang ingin di prediksi.
+1. Anda akan diberikan URL untuk membuka website berupa 
+   ```console
+   localhost:5000/
+   ``` 
+   atau 
+   ```console
+   `127.0.0.1:5000/`
+   ```
+1. Buka URL dengan browser, coba masukkan gambar daun lidah buaya atau daun kemangi yang ingin di prediksi.
 1. Anda akan diberikan prediksi bahwa pada gambar tersebut adalah daun kemangi atau lidah buaya pada halaman website.
